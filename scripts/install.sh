@@ -107,7 +107,7 @@ if [ $OSNAME != "macos" ];then
 	# https://cdn.jsdelivr.net/gh/midoks/mdserver-web@latest/scripts/install.sh
 	if [ ! -d /www/server/mdserver-web ];then
 		if [ "$LOCAL_ADDR" == "common" ];then
-			curl --insecure -sSLo /tmp/master.zip ${HTTP_PREFIX}github.com/midoks/mdserver-web/archive/refs/heads/master.zip
+			curl --insecure -sSLo /tmp/master.zip https://code.midokgithub.com/midoks/mdserver-web/archive/refs/heads/master.zip
 			cd /tmp && unzip /tmp/master.zip
 			mv -f /tmp/mdserver-web-master /www/server/mdserver-web
 			rm -rf /tmp/master.zip
